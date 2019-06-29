@@ -170,7 +170,6 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
 
 
         for (Rect rect : faces.toArray()) {
-
             mCrop = new Mat(mGray, rect);
             Imgproc.resize(mCrop,mCrop,new Size(96,96));
             bmp = Bitmap.createBitmap(mCrop.cols(), mCrop.rows(), Bitmap.Config.ARGB_8888);
